@@ -1,4 +1,4 @@
-# seasons-specials
+# Seasons Specials
 
 A CLI program that will return a list of foods that are in season based on your current location.
 
