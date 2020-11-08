@@ -1,0 +1,35 @@
+{
+	"Alaska": [
+		"AK"
+	],
+	"Atlantic": [
+		"ME",
+		"MA",
+		"RI",
+		"CT",
+		"NY",
+		"NJ",
+		"DE",
+		"MD",
+		"VA",
+		"NC",
+		"SC",
+		"GA",
+		"FL"
+	],
+	"Great_Lakes": [
+		"WA",
+		"OR",
+		"CA"
+	],
+	"Pacific": [
+		"MN",
+		"WI",
+		"MI",
+		"IL",
+		"IN",
+		"OH",
+		"PA",
+		"NY"
+	]
+}

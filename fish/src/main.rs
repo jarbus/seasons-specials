@@ -1,27 +1,32 @@
-static PATH: &str = "../../seafood/Alaska";
-
 use csv::Reader;
 use serde::Deserialize;
-use std::error::Error;
 use std::io;
-use std::process;
+use std::collections::HashSet;
+use std::path::Path;
 
-fn example() -> Result<(), Box<dyn Error>> {
-    // Build the CSV reader and iterate over each record.
-    let mut rdr = csv::Reader::from_reader("../../seafood/Alaska");
-    for result in rdr.records() {
-        // The iterator yields Result<StringRecord, Error>, so we check the
-        // error here.
-        let record = result?;
-        println!("{:?}", record);
-    }
-    Ok(())
+#[derive(Clone, Debug, Deserialize)]
+struct LifeExpectancy {
+    #[serde(rename = "location")]
+    country: String,
+    life_expectancy: Option<f32>,
 }
 
-fn main() -> io::Reader<()> {
-	Ok(())
-    if let Err(err) = example() {
-        println!("error running example: {}", err);
-        process::exit(1);
+fn main() -> io::Result<()> {
+	println!("1");
+    let mut reader = Reader::from_path(Path::new("./All_Regions.csv"))?;
+	println!("2");
+    let mut filter = HashSet::new();
+    let mut count = 0;
+
+    for record in reader.deserialize() {
+        let record: LifeExpectancy = record?;
+        if !filter.contains(&record.country) {
+            println!("{:?}", record);
+            filter.insert(record.country);
+            count += 1;
+        }
     }
+
+    println!("{} countries", count);
+    Ok(())
 }
