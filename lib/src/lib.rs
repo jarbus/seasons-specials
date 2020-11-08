@@ -11,3 +11,4 @@ extern crate strum;
 
 pub mod location;
 pub mod product;
+pub mod utils;

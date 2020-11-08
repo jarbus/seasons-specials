@@ -1,0 +1,32 @@
+Fish,Region,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sept,Oct,Nov,Dec
+Lake Trout,Great_Lakes,1,1,1,1,1,1,0,0,1,1,1,1
+Whitefish,Great_Lakes,1,1,1,1,1,1,1,1,1,1,1,0
+Walleye Pike,Great_Lakes,0,0,1,1,1,1,1,1,1,1,1,0
+Yellow Pearch,Great_Lakes,1,1,1,1,1,1,1,1,1,1,1,1
+Stripped Bass,Atlantic,1,1,1,1,0,1,1,1,1,1,1,1
+Black Bass,Atlantic,1,1,1,1,0,0,0,0,0,1,1,1
+Tautog,Atlantic,0,1,1,1,1,1,1,1,1,1,1,1
+Monkfish,Atlantic,1,1,1,1,1,1,1,1,1,1,1,1
+Skatewing,Atlantic,1,1,1,1,1,1,1,1,1,1,1,1
+Cod,Atlantic,1,1,1,1,1,1,1,1,1,1,1,1
+Sole,Atlantic,1,1,1,1,1,1,1,1,1,1,1,1
+Pollock,Atlantic,1,1,1,1,1,1,1,1,1,1,1,1
+Haddock,Atlantic,1,1,1,1,1,1,1,1,1,1,1,1
+Fluke,Atlantic,1,1,1,1,1,1,1,1,1,1,1,1
+Artic Turbot,Atlantic,1,1,1,1,1,1,1,1,1,1,1,1
+West Coast Dover Sole,Pacific,0,0,0,0,1,1,1,1,1,1,1,1
+Rock Fish,Pacific,0,0,1,1,1,1,1,1,1,0,0,0
+Sardines,Pacific,0,0,1,1,1,1,1,1,1,0,0,0
+Corvina,Pacific,0,0,0,0,1,1,1,1,1,0,0,0
+Yellow Fin Tuna,Pacific,1,1,1,1,1,1,1,1,1,1,1,1
+Albacore,Pacific,1,1,1,1,1,1,1,1,1,1,1,1
+Swordfish,Pacific,1,1,1,1,1,1,1,1,1,1,1,1
+Ono,Pacific,1,1,1,1,1,1,1,1,1,1,1,1
+Opah,Pacific,1,1,1,1,1,1,1,1,1,1,1,1
+King Salmon,Alaska,0,0,0,0,1,1,1,1,1,1,0,0
+Sockeye Salmon,Alaska,0,0,0,0,1,1,1,1,1,0,0,0
+Coho Salmon,Alaska,0,0,0,0,1,1,1,1,1,0,0,0
+Chum Salmon,Alaska,0,0,0,0,1,1,1,1,1,0,0,0
+Pink Salmon,Alaska,0,0,0,0,0,1,1,1,1,0,0,0
+Halibut,Alaska,0,0,1,1,1,1,1,1,1,1,0,0
+Black Cod,Alaska,0,0,1,1,1,1,1,1,1,1,0,0

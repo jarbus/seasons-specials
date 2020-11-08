@@ -21,6 +21,12 @@ pub struct Product {
     category: ProductCategory,
 }
 
+pub struct Fish {
+    name: String,
+    region: String,
+    month_availability: [i8;12]
+}
+
 // pub implied
 impl Product {
     pub fn new(name: &str, category: ProductCategory) -> Product {
