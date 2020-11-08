@@ -17,9 +17,19 @@
 		"GA",
 		"FL"
 	],
-	"Pacific": [
+	"Great_Lakes": [
 		"WA",
 		"OR",
 		"CA"
+	],
+	"Pacific": [
+		"MN",
+		"WI",
+		"MI",
+		"IL",
+		"IN",
+		"OH",
+		"PA",
+		"NY"
 	]
 }
