@@ -2,28 +2,33 @@
 pub use crate::product::Product;
 
 pub struct Location {
-    city: City,
-    address: Option<String>
+    state: State,
+    address: Option<String>,
+    coords: [f32;2]
 }
 
 impl Location {
-    pub fn new(city: City, address: Option<&str>) -> Location {
+    pub fn new(state: State, address: Option<&str>, coords: [f32;2]) -> Location {
         // Make a new copy of the properties
         Location {
-            city,
-            address: address.map_or(None, |a| Some(a.to_string()))
+            state,
+            address: address.map_or(None, |a| Some(a.to_string())),
+            coords
         }
+    }
+    pub fn get_coords(&self) -> &[f32; 2]{
+        return &self.coords;
     }
 }
 
-pub struct City {
+pub struct State {
     name: String,
     uri: String
 }
 
-impl City {
-    pub fn new(name: &str, uri: &str) -> City {
-        City {
+impl State {
+    pub fn new(name: &str, uri: &str) -> State {
+        State {
             name: String::from(name),
             uri: String::from(uri)
         }
@@ -59,5 +64,9 @@ impl Csa {
 
     pub fn get_products(&self) -> &Vec<Product> {
         &self.produces
+    }
+
+    pub fn get_location(&self) -> &Location {
+        &self.location
     }
 }

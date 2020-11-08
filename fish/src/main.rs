@@ -6,6 +6,7 @@ use std::fs;
 // use std::collections::HashSet;
 // use std::path::Path;
 
+<<<<<<< Updated upstream
 
 fn main() -> Result<(), Error> {
 
@@ -27,3 +28,24 @@ fn main() -> Result<(), Error> {
 
     Ok(())
 }
+=======
+fn example() -> Result<(), Box<dyn Error>> {
+    // Build the CSV reader and iterate over each record.
+    let mut rdr = Reader::from_reader("../../seafood/Alaska");
+    for result in rdr.records() {
+        // The iterator yields Result<StringRecord, Error>, so we check the
+        // error here.
+        let record = result?;
+        println!("{:?}", record);
+    }
+    return "Goody"
+}
+
+fn main() -> io::Reader<()> {
+    f let Err(err) = example() {
+        println!("error running example: {}", err);
+        process::exit(1);
+    }
+	Ok(());
+}
+>>>>>>> Stashed changes
