@@ -1,6 +1,6 @@
 use rocket::State;
 
-use crate::location::Csa;
+use lib::location::Csa;
 
 pub struct TempState {
     pub csas: Vec<Csa>,

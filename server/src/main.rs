@@ -1,19 +1,14 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 #[macro_use] extern crate rocket;
 
-extern crate strum;
-#[macro_use] extern crate strum_macros;
-
 use rocket_contrib::serve::{StaticFiles};
 
+extern crate lib;
+use lib::product::{ProductCategory, Product};
+use lib::location::{Location, City, Csa};
+
 // Binary Crate imports
-pub mod product;
-pub use crate::product::{ProductCategory, Product};
-
-pub mod location;
-pub use crate::location::{Location, City, Csa};
-
-pub mod routes; // Imports routes
+pub mod routes;
 pub use crate::routes::TempState;
 
 fn main() {
