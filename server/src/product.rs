@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 #[derive(EnumString, Display, EnumIter)]
 #[strum(serialize_all = "lowercase")]
 pub enum ProductCategory {

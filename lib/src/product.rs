@@ -1,7 +1,7 @@
 #[derive(EnumString, Display, EnumIter)]
 #[strum(serialize_all = "lowercase")]
 pub enum ProductCategory {
-    Vegtable,
+    Vegetable,
     Fruit,
     Meat,
     Seed,
@@ -14,7 +14,6 @@ pub enum ProductCategory {
     Fiber,
     Sprout,
     Specialty,
-    Seafood,
 }
 
 pub struct Product {

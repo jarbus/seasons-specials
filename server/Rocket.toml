@@ -1,0 +1,2 @@
+[global.databases]
+postgres_db = { url = "https://c6.mil01.containers.cloud.ibm.com:22515" }
