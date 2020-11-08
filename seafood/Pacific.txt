@@ -1,9 +1,0 @@
-West Coast Dover Sole 		0	0	0	0	1	1	1	1	1	1	1	1
-Rock Fish 			 		0	0	1	1	1	1	1	1	1	0	0	0
-Sardines 			 		0	0	1	1	1	1	1	1	1	0	0	0
-Corvina 			 		0	0	0	0	1	1	1	1	1	0	0	0
-Yellow Fin Tuna 			1	1	1	1	1	1	1	1	1	1	1	1
-Albacore		 			1	1	1	1	1	1	1	1	1	1	1	1
-Swordfish		 			1	1	1	1	1	1	1	1	1	1	1	1
-Ono				 			1	1	1	1	1	1	1	1	1	1	1	1
-Opah			 			1	1	1	1	1	1	1	1	1	1	1	1
