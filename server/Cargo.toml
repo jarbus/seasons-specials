@@ -15,8 +15,8 @@ version = "0.4.5"
 default-features = false
 features = ["json", "serve", "diesel_postgres_pool"]
 
-[dependencies.lib]
-path = "../lib"
+[dependencies.seasons_lib]
+path = "../seaons_lib"
 
 [dependencies.db]
 path = "../db"

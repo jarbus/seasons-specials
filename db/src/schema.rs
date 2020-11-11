@@ -1,18 +1,18 @@
 table! {
     csa (id) {
         id -> Int4,
-        csaname -> Varchar,
+        csa_name -> Varchar,
         lat -> Nullable<Float8>,
         lon -> Nullable<Float8>,
         address -> Nullable<Text>,
-        stateabbrev -> Nullable<Varchar>,
+        state_abbrev -> Nullable<Varchar>,
     }
 }
 
 table! {
     fish (species) {
         species -> Varchar,
-        regionname -> Varchar,
+        region_name -> Varchar,
         january -> Bool,
         february -> Bool,
         march -> Bool,
@@ -29,24 +29,24 @@ table! {
 }
 
 table! {
-    produce (producename) {
-        producename -> Varchar,
+    produce (produce_name) {
+        produce_name -> Varchar,
         category -> Int4,
     }
 }
 
 table! {
-    production (csaid, producename, season) {
-        csaid -> Int4,
-        producename -> Varchar,
+    production (csa_id, produce_name, season) {
+        csa_id -> Int4,
+        produce_name -> Varchar,
         season -> Int4,
     }
 }
 
 table! {
-    region (regionname) {
-        regionname -> Varchar,
-        stateabbrev -> Varchar,
+    region (region_name) {
+        region_name -> Varchar,
+        state_abbrev -> Varchar,
     }
 }
 

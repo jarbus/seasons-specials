@@ -2,16 +2,16 @@
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate rocket_contrib;
 
-use rand::prelude::*;
-
 use rocket_contrib::serve::{StaticFiles};
 
 extern crate db;
 
-extern crate lib;
-use lib::product::{ProductCategory, Product};
-use lib::location::{Location, State, Csa};
-use lib::utils::{close_enough};
+extern crate seasons_lib;
+use seasons_lib::product::{ProductCategory, Product};
+use seasons_lib::location::{Location, State, Csa};
+use seasons_lib::utils::{close_enough};
+
+use rand::prelude::*;
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufRead,BufReader};
@@ -20,10 +20,12 @@ use std::io::{BufRead,BufReader};
 pub mod routes;
 pub use crate::routes::TempState;
 
-<<<<<<< HEAD
-pub mod db_interface;
-pub use crate::db_interface::DataDbConn;
-=======
+// pub mod db_interface;
+// pub use crate::db_interface::DataDbConn;
+
+#[database("postgres_db")]
+pub struct DataDbConn(diesel::PgConnection);
+
 fn add_file_to_map(file_name:&str, map: &mut HashMap<String,String>){
     let file = File::open(file_name).unwrap();
     let reader = BufReader::new(file);
@@ -78,9 +80,6 @@ const REGIONS: [[&str; 2];23] = [["Alaska", "AK"],
     ["Great_Lakes", "PA"],
     ["Great_Lakes", "NY"]];
 
-
->>>>>>> 7f38ec5c4bed39eddd784a55dec764502fb2e1f6
-
 fn main() {
 
     // Instantiate mapping of states to bodies of water
@@ -133,8 +132,6 @@ fn main() {
         .mount("/", StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/static")))
         .mount("/", routes![routes::csa])
 }
-
-
 
 //let data = TempState {
 //    csas: vec![

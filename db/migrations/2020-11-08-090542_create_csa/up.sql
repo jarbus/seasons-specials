@@ -1,16 +1,16 @@
 -- Your SQL goes here
 CREATE TABLE Csa(
   id SERIAL PRIMARY KEY,
-  csaName VARCHAR(100) NOT NULL,
+  csa_name VARCHAR(100) NOT NULL,
   lat FLOAT,
   lon FLOAT,
   address TEXT,
-  stateAbbrev VARCHAR(3)
+  state_abbrev VARCHAR(3)
 );
 
 CREATE TABLE Region(
-  regionName VARCHAR(100) PRIMARY KEY,
-  stateAbbrev VARCHAR(3) NOT NULL
+  region_name VARCHAR(100) PRIMARY KEY,
+  state_abbrev VARCHAR(3) NOT NULL
 );
 
 -- 0 = Vegetable
@@ -27,7 +27,7 @@ CREATE TABLE Region(
 -- 11 = Sprout,
 -- 12 = Specialty,
 CREATE TABLE Produce(
-  produceName VARCHAR(100) PRIMARY KEY,
+  produce_name VARCHAR(100) PRIMARY KEY,
   category INT NOT NULL
 );
 
@@ -36,15 +36,15 @@ CREATE TABLE Produce(
 -- 2 = Summer
 -- 3 = Fall
 CREATE TABLE Production(
-  csaId INT,
-  produceName VARCHAR(100),
+  csa_id INT,
+  produce_name VARCHAR(100),
   season INT,
-  PRIMARY KEY(csaId, producename, season)
+  PRIMARY KEY(csa_id, produce_name, season)
 );
 
 CREATE TABLE Fish(
   species VARCHAR(100) PRIMARY KEY,
-  regionName VARCHAR(100) NOT NULL,
+  region_name VARCHAR(100) NOT NULL,
   january BOOLEAN NOT NULL,
   february BOOLEAN NOT NULL,
   march BOOLEAN NOT NULL,

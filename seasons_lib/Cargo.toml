@@ -1,5 +1,5 @@
 [package]
-name = "lib"
+name = "seasons_lib"
 version = "0.1.0"
 authors = ["Owen Xie <15828145+nfusionz@users.noreply.github.com>"]
 edition = "2018"

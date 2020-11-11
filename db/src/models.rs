@@ -1,5 +1,12 @@
 
 #[derive(Queryable)]
+pub struct CsaProduction {
+    pub produce_name: String,
+    pub category: i32,
+    pub season: i32
+}
+
+#[derive(Queryable)]
 pub struct Csa {
     pub id: i32,
     pub csa_name: String,
